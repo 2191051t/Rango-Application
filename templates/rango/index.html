@@ -7,6 +7,7 @@
 <h1>Rango says...</h1>
 <div>hey there partner!</div>
 <div>
+    <h1>Most Liked Categories</h1>
     {% if categories %}
     <ul>
         {% for category in categories %}
@@ -17,6 +18,18 @@
     </ul>
     {% else %}
     <strong>There are no categories present.</strong>
+    {% endif %}
+</div>
+<div>
+    <h1>Most Viewed Pages</h1>
+    {% if pages %}
+    <ul>
+        {% for page in pages %}
+        <li>
+            <a href="{{ page.url }}">{{ page.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
     {% endif %}
 </div>
 <div>
